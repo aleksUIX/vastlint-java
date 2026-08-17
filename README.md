@@ -2,6 +2,9 @@
 
 **VAST XML validation for JVM ad servers over gRPC.** Drop it into a Prebid Server Java module, a Spring DSP, or an SSAI stitcher. Same IAB-derived catalog as the CLI, [`vastlint-go`](https://github.com/aleksUIX/vastlint-go), and the Erlang binding.
 
+[![CI](https://github.com/aleksUIX/vastlint-java/actions/workflows/ci.yml/badge.svg)](https://github.com/aleksUIX/vastlint-java/actions)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/aleksUIX/vastlint-java/badge)](https://scorecard.dev/viewer/?uri=github.com/aleksUIX/vastlint-java)
+
 Go embeds the Rust core in-process through CGo. Java does not. A JNI load on a Vert.x event loop is a crash domain you do not want. This client talks to [`vastlint-grpc`](https://github.com/aleksUIX/vastlint/tree/main/crates/vastlint-grpc) over `openadtech.vastlint.v1`. Sub-millisecond validation stays in the Rust process. The JVM gets a blocking stub and a `Verdict`.
 
 **Website and docs:** [VAST tag validator](https://vastlint.org) · **Rule reference:** [VAST error rule reference](https://vastlint.org/docs/rules) · **Methodology:** [How rules are derived](https://vastlint.org/docs/methodology/) · **Web validator:** [validate VAST online](https://vastlint.org/validate)
@@ -50,6 +53,8 @@ vastlint-java is a generated client plus a thin facade over the same validation 
 - Additional standards checks come from W3C XML 1.0, RFC 3986, IANA Media Types, ISO 4217, and Ad-ID.
 - If you already run IAB XSD validation in CI (JAXB against `vast_4.2.xsd`), keep it as a baseline. vastlint complements it with prose-derived and operational checks.
 - Passing vastlint means the tag is structurally compliant with the published standards. It does not mean every player, SDK, exchange, or business rule will accept the creative unchanged.
+
+[OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/aleksUIX/vastlint-java) runs weekly and publishes a public score. Dependabot covers Gradle and GitHub Actions. CodeQL scans Java on every push and PR.
 
 ---
 
@@ -167,4 +172,4 @@ Requires Java 11 or newer.
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE).
+Apache License 2.0. See [LICENSE](LICENSE). Security reports go through [SECURITY.md](SECURITY.md), not public issues.
