@@ -3,7 +3,7 @@ import org.gradle.external.javadoc.StandardJavadocDocletOptions
 plugins {
     `java-library`
     `maven-publish`
-    id("com.google.protobuf") version "0.9.5"
+    id("com.google.protobuf") version "0.10.0"
 }
 
 group = "io.openadtech"
@@ -41,6 +41,7 @@ dependencies {
 
     testImplementation("io.grpc:grpc-inprocess:$grpcVersion")
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 protobuf {
