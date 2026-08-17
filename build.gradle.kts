@@ -40,7 +40,7 @@ dependencies {
     compileOnly("javax.annotation:javax.annotation-api:1.3.2")
 
     testImplementation("io.grpc:grpc-inprocess:$grpcVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+    testImplementation("org.junit.jupiter:junit-jupiter:6.1.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
