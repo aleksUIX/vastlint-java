@@ -21,8 +21,9 @@ java {
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.release.set(11)
     options.encoding = "UTF-8"
+    // Library stays on Java 11. Tests use 17 so JUnit 6 resolves.
+    options.release.set(if (name == "compileTestJava") 17 else 11)
 }
 
 tasks.withType<Javadoc>().configureEach {
@@ -30,17 +31,18 @@ tasks.withType<Javadoc>().configureEach {
     (options as StandardJavadocDocletOptions).addBooleanOption("Xdoclint:none", true)
 }
 
-val grpcVersion = "1.69.1"
-val protobufVersion = "3.25.5"
+val grpcVersion = "1.83.0"
+val protobufVersion = "4.35.1"
 
 dependencies {
     api("io.grpc:grpc-protobuf:$grpcVersion")
     api("io.grpc:grpc-stub:$grpcVersion")
+    api("com.google.protobuf:protobuf-java:$protobufVersion")
     implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
     compileOnly("javax.annotation:javax.annotation-api:1.3.2")
 
     testImplementation("io.grpc:grpc-inprocess:$grpcVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+    testImplementation("org.junit.jupiter:junit-jupiter:6.1.3")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
