@@ -172,4 +172,4 @@ Requires Java 11 or newer.
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE). Security reports go through [SECURITY.md](SECURITY.md), not public issues.
+Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE). Security reports go through [SECURITY.md](SECURITY.md), not public issues.
