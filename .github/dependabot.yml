@@ -11,6 +11,11 @@ updates:
     labels:
       - dependencies
       - java
+    groups:
+      grpc-protobuf:
+        patterns:
+          - "io.grpc*"
+          - "com.google.protobuf*"
 
   - package-ecosystem: github-actions
     directory: /
