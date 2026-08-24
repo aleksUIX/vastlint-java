@@ -32,7 +32,7 @@ tasks.withType<Javadoc>().configureEach {
 }
 
 val grpcVersion = "1.83.1"
-val protobufVersion = "4.35.1"
+val protobufVersion = "4.36.0"
 
 dependencies {
     api("io.grpc:grpc-protobuf:$grpcVersion")
