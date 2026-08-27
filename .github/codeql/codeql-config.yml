@@ -1,3 +1,5 @@
 name: vastlint-java
 paths:
   - src
+queries:
+  - uses: security-extended
