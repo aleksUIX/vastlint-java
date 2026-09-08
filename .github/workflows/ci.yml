@@ -76,8 +76,7 @@ jobs:
           cp build/libs/*.jar dist/
           (cd dist && sha256sum -- *.jar > SHA256SUMS)
           cosign sign-blob --yes dist/SHA256SUMS \
-            --output-signature dist/SHA256SUMS.sig \
-            --output-certificate dist/SHA256SUMS.pem
+            --bundle dist/SHA256SUMS.bundle
 
       - name: Create signed GitHub Release
         env:
