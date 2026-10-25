@@ -12,7 +12,7 @@ Go runs the Rust core in-process through embedded WebAssembly or an optional nat
 **Website and docs:** [VAST tag validator](https://vastlint.org) · **Rule reference:** [VAST error rule reference](https://vastlint.org/docs/rules) · **Methodology:** [How rules are derived](https://vastlint.org/docs/methodology/) · **Web validator:** [validate VAST online](https://vastlint.org/validate)
 
 ```kotlin
-implementation("io.openadtech:vastlint:0.13.0")
+implementation("io.openadtech:vastlint:0.16.0")
 ```
 
 GitHub Packages:
@@ -39,7 +39,7 @@ JitPack, no token:
 <dependency>
   <groupId>com.github.aleksUIX</groupId>
   <artifactId>vastlint-java</artifactId>
-  <version>v0.13.0</version>
+  <version>v0.16.0</version>
 </dependency>
 ```
 
@@ -79,7 +79,7 @@ Every one of these is detectable in a few hundred microseconds on the server bef
 The client is useless without `vastlint-grpc` in reach.
 
 ```sh
-docker run --rm -p 50051:50051 aleksuix/vastlint-grpc:0.13.0
+docker run --rm -p 50051:50051 aleksuix/vastlint-grpc:0.16.0
 ```
 
 Or from the vastlint repo:
