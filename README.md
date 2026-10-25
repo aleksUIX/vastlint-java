@@ -1,5 +1,7 @@
 # vastlint-java
 
+Created by [Aleksander Sekowski](https://github.com/aleksUIX).
+
 **VAST XML validation for JVM ad servers over gRPC.** Drop it into a Prebid Server Java module, a Spring DSP, or an SSAI stitcher. Same IAB-derived catalog as the CLI, [`vastlint-go`](https://github.com/aleksUIX/vastlint-go), and the Erlang binding.
 
 [![CI](https://github.com/aleksUIX/vastlint-java/actions/workflows/ci.yml/badge.svg)](https://github.com/aleksUIX/vastlint-java/actions)
