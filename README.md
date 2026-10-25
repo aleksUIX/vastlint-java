@@ -7,7 +7,7 @@ Created by [Aleksander Sekowski](https://github.com/aleksUIX).
 [![CI](https://github.com/aleksUIX/vastlint-java/actions/workflows/ci.yml/badge.svg)](https://github.com/aleksUIX/vastlint-java/actions)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/aleksUIX/vastlint-java/badge)](https://scorecard.dev/viewer/?uri=github.com/aleksUIX/vastlint-java)
 
-Go embeds the Rust core in-process through CGo. Java does not. A JNI load on a Vert.x event loop is a crash domain you do not want. This client talks to [`vastlint-grpc`](https://github.com/aleksUIX/vastlint/tree/main/crates/vastlint-grpc) over `openadtech.vastlint.v1`. Sub-millisecond validation stays in the Rust process. The JVM gets a blocking stub and a `Verdict`.
+Go runs the Rust core in-process through embedded WebAssembly or an optional native cgo engine. This Java client talks to [`vastlint-grpc`](https://github.com/aleksUIX/vastlint/tree/main/crates/vastlint-grpc) over `openadtech.vastlint.v1`. Validation runs in the Rust server process. The JVM gets a blocking stub and a `Verdict`.
 
 **Website and docs:** [VAST tag validator](https://vastlint.org) · **Rule reference:** [VAST error rule reference](https://vastlint.org/docs/rules) · **Methodology:** [How rules are derived](https://vastlint.org/docs/methodology/) · **Web validator:** [validate VAST online](https://vastlint.org/validate)
 
