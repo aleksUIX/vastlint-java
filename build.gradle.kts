@@ -31,7 +31,7 @@ tasks.withType<Javadoc>().configureEach {
     (options as StandardJavadocDocletOptions).addBooleanOption("Xdoclint:none", true)
 }
 
-val grpcVersion = "1.85.0"
+val grpcVersion = "1.85.1"
 val protobufVersion = "4.36.2"
 
 dependencies {
