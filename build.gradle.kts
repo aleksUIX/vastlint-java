@@ -64,6 +64,12 @@ protobuf {
     }
 }
 
+tasks.withType<Jar>().configureEach {
+    from(files("LICENSE", "NOTICE")) {
+        into("META-INF")
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
