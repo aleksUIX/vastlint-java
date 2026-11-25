@@ -64,6 +64,12 @@ protobuf {
     }
 }
 
+tasks.withType<Jar>().configureEach {
+    from(files("LICENSE", "NOTICE")) {
+        into("META-INF")
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
@@ -86,6 +92,7 @@ publishing {
                     developer {
                         id.set("aleksUIX")
                         name.set("Aleksander Sekowski")
+                        roles.set(listOf("creator", "maintainer"))
                     }
                 }
                 scm {
