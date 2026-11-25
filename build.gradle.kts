@@ -3,7 +3,7 @@ import org.gradle.external.javadoc.StandardJavadocDocletOptions
 plugins {
     `java-library`
     `maven-publish`
-    id("com.google.protobuf") version "0.10.0"
+    id("com.google.protobuf") version "0.10.1"
 }
 
 group = "io.openadtech"
@@ -31,7 +31,7 @@ tasks.withType<Javadoc>().configureEach {
     (options as StandardJavadocDocletOptions).addBooleanOption("Xdoclint:none", true)
 }
 
-val grpcVersion = "1.85.0"
+val grpcVersion = "1.85.1"
 val protobufVersion = "4.36.2"
 
 dependencies {
