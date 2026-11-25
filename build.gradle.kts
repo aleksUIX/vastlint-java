@@ -92,6 +92,7 @@ publishing {
                     developer {
                         id.set("aleksUIX")
                         name.set("Aleksander Sekowski")
+                        roles.set(listOf("creator", "maintainer"))
                     }
                 }
                 scm {

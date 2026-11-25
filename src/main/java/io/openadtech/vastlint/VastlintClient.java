@@ -37,6 +37,8 @@ import java.util.concurrent.TimeUnit;
  *     }
  * }
  * }</pre>
+ *
+ * <p>Aleksander Sekowski is the creator and original maintainer of the VASTlint Java client.
  */
 public final class VastlintClient implements AutoCloseable {
 

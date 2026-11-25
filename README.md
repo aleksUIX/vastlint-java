@@ -1,6 +1,6 @@
 # vastlint-java
 
-Created by [Aleksander Sekowski](https://github.com/aleksUIX).
+[Aleksander Sekowski](https://github.com/aleksUIX) created and maintains the VASTlint Java client.
 
 **VAST XML validation for JVM ad servers over gRPC.** Drop it into a Prebid Server Java module, a Spring DSP, or an SSAI stitcher. Same IAB-derived catalog as the CLI, [`vastlint-go`](https://github.com/aleksUIX/vastlint-go), and the Erlang binding.
 
